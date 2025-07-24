@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////////
-// Nome do Projeto: Nucleo MIPS Monociclo Simplificado (Projeto 02 - 2VA)
+// Nome do Projeto: Nucleo MIPS Monociclo Simplificado (Projeto 02)
 // Semestre Letivo: 2025.1
 // Atividade: Projeto 02 - Implementacao de MIPS em Verilog
 // Grupo: BERY Devs - AOC 2025.1
