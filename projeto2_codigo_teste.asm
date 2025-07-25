@@ -1,7 +1,7 @@
 .eqv magic_number 1024000
 
 .text 
-	#magica_number: prefixo para o número do teste 
+	#magic_number: prefixo para o número do teste (OBS: devido ao tamanho do magic_number, esta instrucao vai virar 3 instruções: LUI, ORI e ADD)
 	addi $t9, $0, magic_number
 	
 	# teste 1 - ADD, SUB e ADDI
@@ -89,14 +89,18 @@
 	addi $t9, $t9, 1 #incremento do contador de teste
 	
 	jal jump_link #OBSERVAR O VALOR DO PC NESTA INSTRUÇÃO
-	#nada disso deve acontecer
+	#isso deve ocorrer apos o jump_link
 	addi $8, $0, -1
 	addi $8, $0, -2
 	addi $8, $0, -3
 	addi $8, $0, -4
-	jump_link:
-	add $8, $0, $ra #deve apresentar na ULA o PC+4 da instrução jal JAL
+	j exit #fim do codigo
 	
+	jump_link:	
+	add $8, $0, $ra #deve apresentar na ULA o PC+4 da instrução jal JAL
+	jr $ra
+	
+	exit:
 	
 	
 	
